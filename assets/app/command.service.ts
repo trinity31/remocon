@@ -21,6 +21,7 @@ export class CommandService {
             .map((response: Response) => {
                 const result = response.json(); //map function automatically throw Observable
                 console.log("success");
+                return result;
             })
             .catch((error:Response) => Observable.throw(error.json())
         );

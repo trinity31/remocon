@@ -15,7 +15,11 @@ export class AppComponent {
     }
 
     onSubmit(form:NgForm) {
-        this.commandService.disconnectSTA(form.value.mac);    
+        this.commandService.disconnectSTA(form.value.mac)
+            .subscribe(
+                data => console.log(data),
+                error => console.error(error)
+            );
         form.resetForm();
     }
 }
