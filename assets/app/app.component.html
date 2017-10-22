@@ -1,1 +1,15 @@
-<h1>Hello World!</h1>
+<div class="col-md-8 col-md-offset-2">
+    <form ngNativeValidate (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+            <label for="content">Mac Address:</label>
+            <input 
+                type="text" 
+                id="content" 
+                class="form-control" 
+                [ngModel]="mac" 
+                name="mac" 
+                required>
+        </div>
+        <button class="btn btn-primary" type="submit">Disconnect</button>
+    </form>
+</div>
